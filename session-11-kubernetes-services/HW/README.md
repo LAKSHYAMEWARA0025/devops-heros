@@ -18,6 +18,24 @@ command output in these folders was captured from an actual run.
 | 4 | **ExternalName** | Pure DNS CNAME to a host *outside* the cluster. No VIP, no endpoints. | CNAME resolution; plus a working target reached end-to-end | [`04-externalname/`](./04-externalname/) |
 | 5 | **Headless** | `clusterIP: None` — DNS returns every Pod IP, each Pod gets its own name. | All 3 Pod IPs from one lookup; identity survived a Pod restart | [`05-headless/`](./05-headless/) |
 
+## Evidence at a glance
+
+| ClusterIP — in-cluster access 3 ways | NodePort — reached from outside |
+|---|---|
+| ![clusterip](./01-clusterip/03-access-from-cluster.png) | ![nodeport](./02-nodeport/02-external-access.png) |
+
+| LoadBalancer — real EXTERNAL-IP | Headless — identity survives a restart |
+|---|---|
+| ![lb](./03-loadbalancer/01-service-external-ip.png) | ![headless](./05-headless/02-stable-identity.png) |
+
+![externalname](./04-externalname/01-externalname-cname.png)
+
+Browser captures of the actual served pages:
+
+| ClusterIP via port-forward | NodePort :30080 | LoadBalancer :80 |
+|---|---|---|
+| ![a](./01-clusterip/04-browser-via-port-forward.png) | ![b](./02-nodeport/03-browser-nodeport-30080.png) | ![c](./03-loadbalancer/03-browser-loadbalancer-port80.png) |
+
 ## How they relate
 
 ```
