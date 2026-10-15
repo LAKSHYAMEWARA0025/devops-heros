@@ -48,7 +48,7 @@
 13. [M9 — Observability](#13-m9--observability-prometheus--grafana)
 14. [Troubleshooting lab](#14-troubleshooting-lab)
 15. [Engineering findings](#15-engineering-findings)
-16. [M10 — Live demo script](#16-m10--live-demo-script)
+16. [M10 — Presentation and live demo](#16-m10--presentation-and-live-demo)
 17. [Submission checklist](#17-submission-checklist)
 
 ---
@@ -148,6 +148,7 @@ session21-capstone/
 ├── troubleshooting/              broken-image.yaml, broken-service.yaml
 ├── scripts/                      seed.sh (demo catalogue), load-test.sh (HPA / dashboard traffic)
 ├── .github/workflows/ci-cd.yml   reference copy of the pipeline
+├── demo/                         presentation: slide deck (PPTX + PDF)
 └── screenshots/
 ```
 
@@ -532,7 +533,14 @@ Real problems found by running the system, not just writing it:
 
 ---
 
-## 16. M10 — Live demo script
+## 16. M10 — Presentation and live demo
+
+**Slide deck:** [`demo/StockPilot-Capstone-Lakshya-Mewara.pptx`](./demo/StockPilot-Capstone-Lakshya-Mewara.pptx)
+(PDF: [`demo/StockPilot-Capstone-Lakshya-Mewara.pdf`](./demo/StockPilot-Capstone-Lakshya-Mewara.pdf)).
+It has 16 slides that follow the capstone's presentation flow, with the narration in each slide's
+speaker notes. See [`demo/`](./demo/).
+
+**Live demo script:**
 
 1. Open `http://stockpilot.local`, add a product, and adjust its stock. Show `/docs`.
 2. Run `kubectl exec -n stockpilot stockpilot-postgres-0 -- psql -U stockpilot -c 'TABLE products'`.
@@ -565,4 +573,4 @@ Real problems found by running the system, not just writing it:
 | `terraform plan`, VPC + EKS in AWS Console, `terraform destroy` | [§11](#11-m7--terraform-aws-vpc--eks) |
 | `kubectl get pods` (all Running), `helm list`, app via Ingress | [§12](#12-m8--kubernetes--helm) |
 | `/metrics`, Prometheus targets UP, Grafana dashboard | [§13](#13-m9--observability-prometheus--grafana) |
-| README; live demo | this file; demo script in [§16](#16-m10--live-demo-script) |
+| README; presentation; live demo | this file; slide deck in [`demo/`](./demo/); demo script in [§16](#16-m10--presentation-and-live-demo) |
