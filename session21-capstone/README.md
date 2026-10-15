@@ -148,7 +148,7 @@ session21-capstone/
 ├── troubleshooting/              broken-image.yaml, broken-service.yaml
 ├── scripts/                      seed.sh (demo catalogue), load-test.sh (HPA / dashboard traffic)
 ├── .github/workflows/ci-cd.yml   reference copy of the pipeline
-├── demo/                         presentation: slide deck (PPTX + PDF)
+├── demo/                         presentation video (MP4) and slide deck (PPTX + PDF)
 └── screenshots/
 ```
 
@@ -535,6 +535,13 @@ Real problems found by running the system, not just writing it:
 
 ## 16. M10 — Presentation and live demo
 
+**Presentation video:** [`demo/StockPilot-Capstone-Lakshya-Mewara.mp4`](./demo/StockPilot-Capstone-Lakshya-Mewara.mp4)
+(11 minutes). It presents the deck and runs the live demo end to end: the dashboard header is changed in
+`frontend/src/App.jsx`, committed and pushed
+([`67c89df`](https://github.com/LAKSHYAMEWARA0025/devops-heros/commit/67c89df43cc9c0bf7315d44e245db8f7c46c47de)),
+the nine-job pipeline goes green, `helm upgrade` rolls the cluster to that commit's images, and the
+refreshed page shows the change. A timeline is in [`demo/README.md`](./demo/README.md).
+
 **Slide deck:** [`demo/StockPilot-Capstone-Lakshya-Mewara.pptx`](./demo/StockPilot-Capstone-Lakshya-Mewara.pptx)
 (PDF: [`demo/StockPilot-Capstone-Lakshya-Mewara.pdf`](./demo/StockPilot-Capstone-Lakshya-Mewara.pdf)).
 It has 16 slides that follow the capstone's presentation flow, with the narration in each slide's
@@ -573,4 +580,4 @@ speaker notes. See [`demo/`](./demo/).
 | `terraform plan`, VPC + EKS in AWS Console, `terraform destroy` | [§11](#11-m7--terraform-aws-vpc--eks) |
 | `kubectl get pods` (all Running), `helm list`, app via Ingress | [§12](#12-m8--kubernetes--helm) |
 | `/metrics`, Prometheus targets UP, Grafana dashboard | [§13](#13-m9--observability-prometheus--grafana) |
-| README; presentation; live demo | this file; slide deck in [`demo/`](./demo/); demo script in [§16](#16-m10--presentation-and-live-demo) |
+| README; presentation; live demo | this file; presentation video (MP4) and slide deck in [`demo/`](./demo/); live demo in the video and [§16](#16-m10--presentation-and-live-demo) |
