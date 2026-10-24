@@ -86,7 +86,7 @@ export default function App() {
       <main className="main">
         <header className="topbar">
           <div>
-            <p className="eyebrow">Warehouse · Main store</p>
+            <p className="eyebrow">Warehouse · Mumbai store</p>
             <h1>Inventory overview</h1>
           </div>
           <div className="topbar-actions">
